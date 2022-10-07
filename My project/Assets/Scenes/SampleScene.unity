@@ -322,6 +322,11 @@ MonoBehaviour:
   FirePoint: {fileID: 149312022}
   BulletPrefab: {fileID: 5739078604661111265, guid: 721bb6b98a2da544e8a93b628ee6fbf1, type: 3}
   Power: 0
+  Vib: 0
+  Radius: 0
+  TargetMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!4 &485957651
 Transform:
   m_ObjectHideFlags: 0
@@ -626,7 +631,7 @@ GameObject:
   - component: {fileID: 1379786657}
   - component: {fileID: 1379786656}
   - component: {fileID: 1379786655}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

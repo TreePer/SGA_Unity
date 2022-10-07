@@ -5,7 +5,7 @@ using UnityEngine;
 public class BulletController : MonoBehaviour {
     public GameObject Fx;
     private void OnCollisionEnter(Collision collision) {
-        Destroy(    gameObject, 0.05f);
+        Destroy(gameObject, 0.05f);
 
         GameObject obj = Instantiate(Fx);
 

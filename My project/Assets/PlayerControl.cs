@@ -9,11 +9,17 @@ public class PlayerControl : MonoBehaviour
     public Transform FirePoint;
     public GameObject BulletPrefab;
     public float Power;
+    public float Vib;
+    public float Radius;
+
+    public LayerMask TargetMask;
 
     // Start is called before the first frame update
     void Start() {
         Speed = 5.0f;
         Power = 0;
+        Vib = 0;
+        Radius = 0;
     }
 
     private void Awake() {
@@ -41,21 +47,57 @@ public class PlayerControl : MonoBehaviour
         
         //Vector3 Movment = new Vector3(fHor, 0.0f, fVer);
         //transform.position += Movment * Speed * Time.deltaTime;
-
+        
         if(Input.GetKeyDown(KeyCode.Space)) {
             Power = 0;
+            Vib = 0;
         }
         if(Input.GetKey(KeyCode.Space)) {
             Power += Time.deltaTime;
+            Radius += Time.deltaTime;
+            Vib += Time.deltaTime;
         }
-        if (Input.GetKeyUp(KeyCode.Space)) {
-            
+        if (Input.GetKey(KeyCode.Space)) {
+            RaycastHit hit;
+            if (Physics.Raycast(FirePoint.position, FirePoint.transform.forward, out hit, 100.0f, TargetMask)) {
+
+                Vector3 offset = new Vector3(
+                    Mathf.Cos(90 * Mathf.Deg2Rad),
+                    Mathf.Sin(90 * Mathf.Deg2Rad),
+                    1.0f) * Radius + FirePoint.position;
+                    
+
+                Vector3 Vibration = new Vector3(
+                    Random.Range(-0.2f, 0.2f),
+                    Random.Range(-0.2f, 0.2f),
+                    0.0f
+                    ) * Vib;
+
+                Debug.Log(Vibration);
+                Debug.DrawLine(FirePoint.position, offset + Vibration, Color.red);
+                /*
+                if(hit.transform.tag != "Bullet") {
+                    GameObject obj = Instantiate(BulletPrefab);
+
+                    obj.transform.position = hit.point;
+                }
+                 */
+
+                GameObject obj = Instantiate(BulletPrefab);
+
+                obj.transform.position = offset + Vibration;
+
+
+            }
+
+            /*
             GameObject obj = Instantiate(BulletPrefab);
 
             obj.transform.position = FirePoint.position;
 
             Rigidbody Rigid = obj.GetComponent<Rigidbody>();
             Rigid.AddForce(FirePoint.transform.forward * Power * 1000);
+             */
         }
     }
 }
