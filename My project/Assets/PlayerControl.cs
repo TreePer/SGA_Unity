@@ -8,6 +8,7 @@ public class PlayerControl : MonoBehaviour
     private Rigidbody Rigid = null;
     public Transform FirePoint;
     public GameObject BulletPrefab;
+    public GameObject BulletfxPrefab;
     public float Power;
     public float Vib;
     public float Radius;
@@ -51,6 +52,7 @@ public class PlayerControl : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space)) {
             Power = 0;
             Vib = 0;
+            Radius = 0;
         }
         if(Input.GetKey(KeyCode.Space)) {
             Power += Time.deltaTime;
@@ -59,12 +61,12 @@ public class PlayerControl : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Space)) {
             RaycastHit hit;
-            if (Physics.Raycast(FirePoint.position, FirePoint.transform.forward, out hit, 100.0f, TargetMask)) {
+            if (Physics.Raycast(FirePoint.position, FirePoint.transform.forward, out hit, Mathf.Infinity, TargetMask)) {
 
                 Vector3 offset = new Vector3(
                     Mathf.Cos(90 * Mathf.Deg2Rad),
                     Mathf.Sin(90 * Mathf.Deg2Rad),
-                    1.0f) * Radius + FirePoint.position;
+                    0.1f) * Radius + transform.position;
                     
 
                 Vector3 Vibration = new Vector3(
@@ -73,8 +75,7 @@ public class PlayerControl : MonoBehaviour
                     0.0f
                     ) * Vib;
 
-                Debug.Log(Vibration);
-                Debug.DrawLine(FirePoint.position, offset + Vibration, Color.red);
+                
                 /*
                 if(hit.transform.tag != "Bullet") {
                     GameObject obj = Instantiate(BulletPrefab);
@@ -85,7 +86,12 @@ public class PlayerControl : MonoBehaviour
 
                 GameObject obj = Instantiate(BulletPrefab);
 
-                obj.transform.position = offset + Vibration;
+
+                obj.transform.position =  offset + Vibration;
+                Debug.DrawLine(transform.position, obj.transform.position + offset + Vibration, Color.red);
+
+                Rigidbody Rigid = obj.GetComponent<Rigidbody>();
+                Rigid.AddForce(FirePoint.transform.forward * Power * 1000);
 
 
             }
@@ -98,6 +104,11 @@ public class PlayerControl : MonoBehaviour
             Rigidbody Rigid = obj.GetComponent<Rigidbody>();
             Rigid.AddForce(FirePoint.transform.forward * Power * 1000);
              */
+        }
+
+        if(Input.GetKey(KeyCode.E)) {
+            //GameObject obj;
+            //EnemyManager.GetInstance().AddEnemy(obj);
         }
     }
 }
