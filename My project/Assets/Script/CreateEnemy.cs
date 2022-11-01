@@ -37,7 +37,7 @@ public class CreateEnemy : MonoBehaviour {
         yield return new WaitForSeconds(0.5f);
 
         while (true) {
-            yield return new WaitForSeconds(10.0f);
+            yield return new WaitForSeconds(2.0f);
 
             if (transform.childCount > 0)
                 continue;

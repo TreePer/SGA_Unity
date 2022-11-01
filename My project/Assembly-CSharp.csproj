@@ -56,14 +56,17 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Script\Editors\ViewEditor.cs" />
     <Compile Include="Assets\Script\Controllers\PlayerControl.cs" />
+    <Compile Include="Assets\Script\Editors\FieldOfView.cs" />
     <Compile Include="Assets\Script\CreateEnemy.cs" />
+    <Compile Include="Assets\Script\FrustumLine.cs" />
     <Compile Include="Assets\Script\Managers\GameManager.cs" />
+    <Compile Include="Assets\Script\Managers\ObjectManager.cs" />
     <Compile Include="Assets\Script\Controllers\EnemyController.cs" />
     <Compile Include="Assets\Script\Managers\EnemyManager.cs" />
     <Compile Include="Assets\Script\Editors\MyGizmo.cs" />
     <Compile Include="Assets\Script\Controllers\BulletController.cs" />
-    <Compile Include="Assets\Script\Managers\ObjectManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shaders\SeeThrough.shader" />
@@ -736,11 +739,11 @@
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Rider.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Rider.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
