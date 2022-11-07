@@ -56,16 +56,19 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Script\Editors\ViewEditor.cs" />
+    <Compile Include="Assets\Script\Editor Tools\ViewEditor.cs" />
+    <Compile Include="Assets\Script\Editor Tools\Node.cs" />
     <Compile Include="Assets\Script\Controllers\PlayerControl.cs" />
-    <Compile Include="Assets\Script\Editors\FieldOfView.cs" />
+    <Compile Include="Assets\Script\Editor Tools\FieldOfView.cs" />
     <Compile Include="Assets\Script\CreateEnemy.cs" />
     <Compile Include="Assets\Script\FrustumLine.cs" />
     <Compile Include="Assets\Script\Managers\GameManager.cs" />
     <Compile Include="Assets\Script\Managers\ObjectManager.cs" />
     <Compile Include="Assets\Script\Controllers\EnemyController.cs" />
+    <Compile Include="Assets\Script\Editor Tools\WayPointEditor.cs" />
+    <Compile Include="Assets\Script\Managers\WayPoint.cs" />
     <Compile Include="Assets\Script\Managers\EnemyManager.cs" />
-    <Compile Include="Assets\Script\Editors\MyGizmo.cs" />
+    <Compile Include="Assets\Script\Editor Tools\MyGizmo.cs" />
     <Compile Include="Assets\Script\Controllers\BulletController.cs" />
   </ItemGroup>
   <ItemGroup>

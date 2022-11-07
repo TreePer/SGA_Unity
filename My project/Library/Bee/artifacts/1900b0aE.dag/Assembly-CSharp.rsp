@@ -364,13 +364,16 @@
 "Assets/Script/Controllers/EnemyController.cs"
 "Assets/Script/Controllers/PlayerControl.cs"
 "Assets/Script/CreateEnemy.cs"
-"Assets/Script/Editors/FieldOfView.cs"
-"Assets/Script/Editors/MyGizmo.cs"
-"Assets/Script/Editors/ViewEditor.cs"
+"Assets/Script/Editor Tools/FieldOfView.cs"
+"Assets/Script/Editor Tools/MyGizmo.cs"
+"Assets/Script/Editor Tools/Node.cs"
+"Assets/Script/Editor Tools/ViewEditor.cs"
+"Assets/Script/Editor Tools/WayPointEditor.cs"
 "Assets/Script/FrustumLine.cs"
 "Assets/Script/Managers/EnemyManager.cs"
 "Assets/Script/Managers/GameManager.cs"
 "Assets/Script/Managers/ObjectManager.cs"
+"Assets/Script/Managers/WayPoint.cs"
 -langversion:9.0
 
 /deterministic
