@@ -370,6 +370,7 @@
 "Assets/Script/Editor Tools/ViewEditor.cs"
 "Assets/Script/Editor Tools/WayPointEditor.cs"
 "Assets/Script/FrustumLine.cs"
+"Assets/Script/GetLine.cs"
 "Assets/Script/Managers/EnemyManager.cs"
 "Assets/Script/Managers/GameManager.cs"
 "Assets/Script/Managers/ObjectManager.cs"

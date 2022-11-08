@@ -104,16 +104,13 @@ public class EnemyController : MonoBehaviour
 
                     Vector3 eulerAngles = hit.transform.eulerAngles * Mathf.Deg2Rad;
                         
-                    BottomPoint[i] = new Vector3(Temp[i].x * hit.transform.lossyScale.x, 0.1f, Temp[i].z * hit.transform.lossyScale.z);
+                    BottomPoint[i] = new Vector3(Temp[i].x, 0.1f, Temp[i].z);
                     
                     RotMatrix = RotationX(eulerAngles.x) * RotationY(eulerAngles.y) * RotationZ(eulerAngles.z);
                     PosMatrix = Translate(hit.transform.position);
-                    ScaleMatrix = Scale(new Vector3(1.5f, 1.5f, 1.5f));
+                    ScaleMatrix = Scale(hit.transform.lossyScale * 1.5f);
 
                     Matrix = PosMatrix * RotMatrix * ScaleMatrix;
-
-                    
-
 
                     VertexList.Add(Matrix.MultiplyPoint(BottomPoint[i]));
                 }

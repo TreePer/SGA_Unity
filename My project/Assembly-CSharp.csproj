@@ -70,6 +70,7 @@
     <Compile Include="Assets\Script\Managers\EnemyManager.cs" />
     <Compile Include="Assets\Script\Editor Tools\MyGizmo.cs" />
     <Compile Include="Assets\Script\Controllers\BulletController.cs" />
+    <Compile Include="Assets\Script\GetLine.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shaders\SeeThrough.shader" />
