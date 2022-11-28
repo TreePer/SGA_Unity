@@ -363,6 +363,7 @@
 "Assets/Script/Controllers/BulletController.cs"
 "Assets/Script/Controllers/EnemyController.cs"
 "Assets/Script/Controllers/PlayerControl.cs"
+"Assets/Script/Controllers/WayPointController.cs"
 "Assets/Script/CreateEnemy.cs"
 "Assets/Script/Editor Tools/FieldOfView.cs"
 "Assets/Script/Editor Tools/MyGizmo.cs"
@@ -375,7 +376,6 @@
 "Assets/Script/Managers/GameManager.cs"
 "Assets/Script/Managers/ObjectManager.cs"
 "Assets/Script/Managers/WayPoint.cs"
-"Assets/Script/WayPointController.cs"
 -langversion:9.0
 
 /deterministic
