@@ -9,21 +9,24 @@ public class WayPointEditor : EditorWindow {
         GetWindow(typeof(WayPointEditor)).Show();
     }
 
-    public GameObject PointList = null;
+    public GameObject NodeList;
     private void OnGUI() {
 
         SerializedObject obj = new SerializedObject(this);
-        EditorGUILayout.PropertyField(obj.FindProperty("PointList"));
+        EditorGUILayout.PropertyField(obj.FindProperty("NodeList"));
 
 
-        if (PointList != null && GUILayout.Button("Create")) {
-            GameObject Object = new GameObject("Node");
-            Object.transform.parent = PointList.transform;
-            Object.AddComponent<Node>();
-            Object.AddComponent<MyGizmo>();
+        if (NodeList != null && GUILayout.Button("Create")) {
+            CreateNode();
         }
 
         obj.ApplyModifiedProperties();
+    }
+
+    public void CreateNode() {
+        GameObject Object = new GameObject(NodeList.transform.childCount.ToString());
+        Object.transform.position = new Vector3(25.0f, 0.0f, 25.0f);
+        Object.transform.SetParent(NodeList.transform);
     }
 
 }

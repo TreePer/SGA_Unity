@@ -34,18 +34,20 @@ public class CreateEnemy : MonoBehaviour {
     }
 
     IEnumerator Create() {
+        
         yield return new WaitForSeconds(0.5f);
 
         while (true) {
             yield return new WaitForSeconds(2.0f);
 
-            if (transform.childCount > 0)
+            if (transform.Find("Jammo")) {   
                 continue;
-
+            }
+            Debug.Log("start");
             GameObject obj = Instantiate(EnemyPrefap);
 
             obj.transform.name = "Jammo";
-
+            
             obj.transform.position = transform.position;
 
             obj.transform.parent = this.transform;

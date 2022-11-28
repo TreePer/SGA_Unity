@@ -56,21 +56,17 @@ public class EnemyController : MonoBehaviour
 
         transform.Rotate(transform.up * fAngle * Time.deltaTime);
 
-        //transform.position += transform.forward * 5.0f * Time.deltaTime;
-
-
         foreach (Vector3 Point in PointList)
             Debug.DrawLine(
-                transform.position,  // 시작점.
-                (Point.normalized * Radius) + transform.position,  // 도착지점.
-                Color.red); // 라인 색
+                transform.position,
+                (Point.normalized * Radius) + transform.position,
+                Color.red);
 
         RayPoint();
     }
 
     public void RayPoint() {
         
-        //Ray ray = new Ray(transform.position, transform.forward);
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 

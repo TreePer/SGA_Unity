@@ -7,7 +7,7 @@ using UnityEngine;
 [RequireComponent(typeof(SphereCollider))]
 public class Node : MonoBehaviour {
 
-    [HideInInspector] public Node node;
+    [HideInInspector] public Node next;
     private bool check;
 
     private void Awake() {
@@ -16,6 +16,10 @@ public class Node : MonoBehaviour {
 
         rigid.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
         coll.radius = 0.2f;
+    }
+
+    private void Update() {
+        Debug.DrawLine(transform.position, next.transform.position, Color.black);
     }
 
     IEnumerator Start() {

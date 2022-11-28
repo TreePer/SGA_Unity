@@ -36,12 +36,13 @@ public class GameManager : MonoBehaviour {
                 Random.Range(-25.0f, 25.0f)
                 );
 
+            obj.AddComponent<WayPointController>();
             obj.transform.name = Count.ToString();
             obj.transform.parent = GameObject.Find("PointList").transform;
 
             ++Count;
 
-            if (10 <= Count) {
+            if (2 <= Count) {
                 break;
             }
         }

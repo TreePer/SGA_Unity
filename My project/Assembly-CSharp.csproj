@@ -65,12 +65,13 @@
     <Compile Include="Assets\Script\Managers\GameManager.cs" />
     <Compile Include="Assets\Script\Managers\ObjectManager.cs" />
     <Compile Include="Assets\Script\Controllers\EnemyController.cs" />
+    <Compile Include="Assets\Script\GetLine.cs" />
     <Compile Include="Assets\Script\Editor Tools\WayPointEditor.cs" />
     <Compile Include="Assets\Script\Managers\WayPoint.cs" />
     <Compile Include="Assets\Script\Managers\EnemyManager.cs" />
     <Compile Include="Assets\Script\Editor Tools\MyGizmo.cs" />
     <Compile Include="Assets\Script\Controllers\BulletController.cs" />
-    <Compile Include="Assets\Script\GetLine.cs" />
+    <Compile Include="Assets\Script\WayPointController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shaders\SeeThrough.shader" />
