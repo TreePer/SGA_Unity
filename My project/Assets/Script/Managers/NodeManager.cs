@@ -130,6 +130,7 @@ public class NodeManager : MonoBehaviour {
             if(fResult > frontDistance[i] + middleDistance[i]) {
                 fResult = frontDistance[i] + middleDistance[i];
                 index = i;
+
             }
         }
 
