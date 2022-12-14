@@ -30,14 +30,10 @@ public class GameManager : MonoBehaviour {
             yield return null;
 
             GameObject obj = Instantiate(JammoObj);
-            obj.transform.position = new Vector3(
-                Random.Range(-25.0f, 25.0f),
-                Random.Range(10.0f, 25.0f),
-                Random.Range(-25.0f, 25.0f)
-                );
 
             obj.AddComponent<WayPointController>();
             obj.transform.name = Count.ToString();
+            obj.transform.position = new Vector3(0.0f, 0.0f, 0.0f + Count);
             obj.transform.parent = GameObject.Find("PointList").transform;
 
             ++Count;

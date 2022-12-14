@@ -57,15 +57,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\Editor Tools\ViewEditor.cs" />
+    <Compile Include="Assets\Script\Managers\MathManager.cs" />
     <Compile Include="Assets\Script\Editor Tools\Node.cs" />
     <Compile Include="Assets\Script\Controllers\PlayerControl.cs" />
     <Compile Include="Assets\Script\Editor Tools\FieldOfView.cs" />
     <Compile Include="Assets\Script\CreateEnemy.cs" />
+    <Compile Include="Assets\Script\Controllers\TestControoler.cs" />
     <Compile Include="Assets\Script\FrustumLine.cs" />
     <Compile Include="Assets\Script\Managers\GameManager.cs" />
     <Compile Include="Assets\Script\Managers\ObjectManager.cs" />
     <Compile Include="Assets\Script\Controllers\EnemyController.cs" />
-    <Compile Include="Assets\Script\GetLine.cs" />
+    <Compile Include="Assets\Script\Managers\NodeManager.cs" />
     <Compile Include="Assets\Script\Editor Tools\WayPointEditor.cs" />
     <Compile Include="Assets\Script\Managers\WayPoint.cs" />
     <Compile Include="Assets\Script\Managers\EnemyManager.cs" />

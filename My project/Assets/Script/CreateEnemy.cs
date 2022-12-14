@@ -40,10 +40,12 @@ public class CreateEnemy : MonoBehaviour {
         while (true) {
             yield return new WaitForSeconds(2.0f);
 
-            if (transform.Find("Jammo")) {   
+            Transform Jammo = transform.Find("Jammo");
+
+            if (Jammo != null) {   
                 continue;
             }
-            Debug.Log("start");
+
             GameObject obj = Instantiate(EnemyPrefap);
 
             obj.transform.name = "Jammo";
@@ -67,9 +69,8 @@ public class CreateEnemy : MonoBehaviour {
                     StartCoroutine(SetColor(renderer, color));
                 }
             }
+            obj.GetComponent<CapsuleCollider>().isTrigger = true;
         }
-
-        
     }
 
     IEnumerator SetColor(SkinnedMeshRenderer renderer, Color color) {
